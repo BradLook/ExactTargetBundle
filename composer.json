@@ -1,0 +1,27 @@
+{
+    "name": "hautelook/exact-target-bundle",
+    "description": "A Symfony2 bundle for ExactTarget/FuelSDK-PHP",
+    "authors": [
+        {
+            "name": "Bradford Dewey",
+            "email": "brad.dewey@hautelook.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Hautelook\\ExactTargetBundle": "" }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/BradLook/FuelSDK-PHP.git"
+        }
+    ],
+    "require": {
+        "php": ">=5.2.3",
+        "ext-mcrypt": "*",
+        "ext-openssl": "*",
+        "ext-soap": "*",
+        "bwoodmansee/fuel-sdk-php": "@dev"
+    },
+    "target-dir": "Hautelook/ExactTargetBundle"
+}

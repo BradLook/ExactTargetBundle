@@ -1,4 +1,4 @@
-exacttarget-fuelsdk-bundle
+Hautelook/ExactTargetBundle
 ==========================
 
-Symfony bundle for ExactTarget/FuelSDK-PHP
+A Symfony2 bundle for ExactTarget/FuelSDK-PHP
