@@ -39,11 +39,24 @@ class AbstractService {
             return false;
         }
 
-        if (!empty($props)) {
-            $this->service->props = $props;
-        }
+        $this->setProps($props);
 
         return($this->service->get());
+    }
+
+    public function getMore(array $props = array())
+    {
+        if (!method_exists($this->service, 'getMoreResults')) {
+            return false;
+        }
+
+        if (!empty($props) && !$this->properties->checkGetColumns($props)) {
+            return false;
+        }
+
+        $this->setProps($props);
+
+        return($this->service->getMoreResults());
     }
 
     public function post(array $props)
@@ -52,9 +65,28 @@ class AbstractService {
             return false;
         }
 
+        if (!empty($props) && !$this->properties->checkGetColumns($props)) {
+            return false;
+        }
+
         $this->setProps($props);
 
-        //return($this->service->post());
+        return($this->service->post());
+    }
+
+    public function put(array $props)
+    {
+        if (!method_exists($this->service, 'put')) {
+            return false;
+        }
+
+        if (!empty($props) && !$this->properties->checkGetColumns($props)) {
+            return false;
+        }
+
+        $this->setProps($props);
+
+        return($this->service->put());
     }
 
     public function patch(array $props)
@@ -63,9 +95,13 @@ class AbstractService {
             return false;
         }
 
+        if (!empty($props) && !$this->properties->checkGetColumns($props)) {
+            return false;
+        }
+
         $this->setProps($props);
 
-        //return($this->service->patch());
+        return($this->service->patch());
     }
 
     public function delete(array $props)
@@ -74,12 +110,16 @@ class AbstractService {
             return false;
         }
 
+        if (!empty($props) && !$this->properties->checkGetColumns($props)) {
+            return false;
+        }
+
         $this->setProps($props);
 
-        //return($this->service->delete());
+        return($this->service->delete());
     }
 
-    private function setProps(array $props)
+    protected function setProps(array $props)
     {
         $this->properties->setData($props);
 

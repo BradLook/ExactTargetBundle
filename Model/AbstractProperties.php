@@ -10,8 +10,9 @@ class AbstractProperties
     {
         foreach ($data as $key => $value) {
             $property = lcfirst($key);
+            $setMethod = "set$key";
             if (property_exists($this, $property)) {
-                $this->$property = $value;
+                $this->$setMethod = $value;
             } else {
                 throw new \Exception('Invalid property ' . $key . ' for ' . get_class($this));
             }
@@ -29,6 +30,19 @@ class AbstractProperties
                 throw new \Exception('Invalid column ' . $column . ' for ' . get_class($this));
             }
         }
+    }
+
+    public function __toArray()
+    {
+        $data = array();
+        foreach ($this->getColumns as $column) {
+            $getMethod = "get" . ucfirst($column);
+            if (method_exists($this, $getMethod) && ($this->$getMethod() !== null)) {
+                $data[$column] = $this->$getMethod();
+            }
+        }
+
+        return $data;
     }
 }
  

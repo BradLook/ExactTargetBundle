@@ -2,20 +2,20 @@
 
 namespace Hautelook\ExactTargetBundle\Services;
 
-use ET_Email;
-use Hautelook\ExactTargetBundle\Model\Email as EmailProperties;
+use ET_List_Subscriber;
+use Hautelook\ExactTargetBundle\Model\ListSubscriber as ListSubscriberProperties;
 
-class Email extends AbstractService
+class ListSubscriberService extends AbstractService
 {
     public function __construct($appSignature, $clientId, $clientSecret, $defaultWsdl)
     {
         parent::__construct($appSignature, $clientId, $clientSecret, $defaultWsdl);
 
-        $this->service = new ET_Email();
+        $this->service = new ET_List_Subscriber();
 
         $this->service->authStub = $this->client;
 
-        $this->properties = new EmailProperties();
+        $this->properties = new ListSubscriberProperties();
     }
 }
  

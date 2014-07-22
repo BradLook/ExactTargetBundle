@@ -2,20 +2,20 @@
 
 namespace Hautelook\ExactTargetBundle\Services;
 
-use ET_Subscriber;
-use Hautelook\ExactTargetBundle\Model\Subscriber as SubscriberProperties;
+use ET_OpenEvent;
+use Hautelook\ExactTargetBundle\Model\OpenEvent as OpenEventProperties;
 
-class Subscriber extends AbstractService
+class OpenEventService extends AbstractService
 {
     public function __construct($appSignature, $clientId, $clientSecret, $defaultWsdl)
     {
         parent::__construct($appSignature, $clientId, $clientSecret, $defaultWsdl);
 
-        $this->service = new ET_Subscriber();
+        $this->service = new ET_OpenEvent();
 
         $this->service->authStub = $this->client;
 
-        $this->properties = new SubscriberProperties();
+        $this->properties = new OpenEventProperties();
     }
 }
  

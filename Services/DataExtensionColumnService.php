@@ -5,7 +5,7 @@ namespace Hautelook\ExactTargetBundle\Services;
 use ET_DataExtension_Column;
 use Hautelook\ExactTargetBundle\Model\DataExtensionColumn as DataExtensionColumnProperties;
 
-class DataExtensionColumn extends AbstractService
+class DataExtensionColumnService extends AbstractService
 {
     public function __construct($appSignature, $clientId, $clientSecret, $defaultWsdl)
     {

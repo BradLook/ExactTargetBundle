@@ -2,20 +2,20 @@
 
 namespace Hautelook\ExactTargetBundle\Services;
 
-use ET_TriggeredSend;
-use Hautelook\ExactTargetBundle\Model\TriggeredSend as TriggeredSendProperties;
+use ET_ClickEvent;
+use Hautelook\ExactTargetBundle\Model\ClickEvent as ClickEventProperties;
 
-class TriggeredSend extends AbstractService
+class ClickEventService extends AbstractService
 {
     public function __construct($appSignature, $clientId, $clientSecret, $defaultWsdl)
     {
         parent::__construct($appSignature, $clientId, $clientSecret, $defaultWsdl);
 
-        $this->service = new ET_TriggeredSend();
+        $this->service = new ET_ClickEvent();
 
         $this->service->authStub = $this->client;
 
-        $this->properties = new TriggeredSendProperties();
+        $this->properties = new ClickEventProperties();
     }
 }
  

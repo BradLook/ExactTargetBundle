@@ -6,70 +6,70 @@
 
     <services>
         <service id="hautelook_exact_target.services.bounce_event"
-                 class="Hautelook\ExactTargetBundle\Services\BounceEvent">
+                 class="Hautelook\ExactTargetBundle\Services\BounceEventService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.campaign"
-                 class="Hautelook\ExactTargetBundle\Services\Campaign">
+                 class="Hautelook\ExactTargetBundle\Services\CampaignService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.campaign_asset"
-                 class="Hautelook\ExactTargetBundle\Services\CampaignAsset">
+                 class="Hautelook\ExactTargetBundle\Services\CampaignAssetService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.click_event"
-                 class="Hautelook\ExactTargetBundle\Services\ClickEvent">
+                 class="Hautelook\ExactTargetBundle\Services\ClickEventService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.content_area"
-                 class="Hautelook\ExactTargetBundle\Services\ContentArea">
+                 class="Hautelook\ExactTargetBundle\Services\ContentAreaService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.data_extension"
-                 class="Hautelook\ExactTargetBundle\Services\DataExtension">
+                 class="Hautelook\ExactTargetBundle\Services\DataExtensionService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.data_extension_column"
-                 class="Hautelook\ExactTargetBundle\Services\DataExtensionColumn">
+                 class="Hautelook\ExactTargetBundle\Services\DataExtensionColumnService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.data_extension_row"
-                 class="Hautelook\ExactTargetBundle\Services\DataExtensionRow">
+                 class="Hautelook\ExactTargetBundle\Services\DataExtensionRowService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.email"
-                 class="Hautelook\ExactTargetBundle\Services\Email">
+                 class="Hautelook\ExactTargetBundle\Services\EmailService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.folder"
-                 class="Hautelook\ExactTargetBundle\Services\Folder">
+                 class="Hautelook\ExactTargetBundle\Services\FolderService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
@@ -83,42 +83,42 @@
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.list_subscriber"
-                 class="Hautelook\ExactTargetBundle\Services\ListSubscriber">
+                 class="Hautelook\ExactTargetBundle\Services\ListSubscriberService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.open_event"
-                 class="Hautelook\ExactTargetBundle\Services\OpenEvent">
+                 class="Hautelook\ExactTargetBundle\Services\OpenEventService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.sent_event"
-                 class="Hautelook\ExactTargetBundle\Services\SentEvent">
+                 class="Hautelook\ExactTargetBundle\Services\SentEventService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.subscriber"
-                 class="Hautelook\ExactTargetBundle\Services\Subscriber">
+                 class="Hautelook\ExactTargetBundle\Services\SubscriberService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.triggered_send"
-                 class="Hautelook\ExactTargetBundle\Services\TriggeredSend">
+                 class="Hautelook\ExactTargetBundle\Services\TriggeredSendService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>
             <argument>%exact_target.defaultwsdl%</argument>
         </service>
         <service id="hautelook_exact_target.services.unsub_event"
-                 class="Hautelook\ExactTargetBundle\Services\UnsubEvent">
+                 class="Hautelook\ExactTargetBundle\Services\UnsubEventService">
             <argument>%exact_target.appsignature%</argument>
             <argument>%exact_target.clientid%</argument>
             <argument>%exact_target.clientsecret%</argument>

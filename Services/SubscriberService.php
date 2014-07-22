@@ -2,20 +2,20 @@
 
 namespace Hautelook\ExactTargetBundle\Services;
 
-use ET_ContentArea;
-use Hautelook\ExactTargetBundle\Model\ContentArea as ContentAreaProperties;
+use ET_Subscriber;
+use Hautelook\ExactTargetBundle\Model\Subscriber as SubscriberProperties;
 
-class ListService extends AbstractService
+class SubscriberService extends AbstractService
 {
     public function __construct($appSignature, $clientId, $clientSecret, $defaultWsdl)
     {
         parent::__construct($appSignature, $clientId, $clientSecret, $defaultWsdl);
 
-        $this->service = new ET_ContentArea();
+        $this->service = new ET_Subscriber();
 
         $this->service->authStub = $this->client;
 
-        $this->properties = new ContentAreaProperties();
+        $this->properties = new SubscriberProperties();
     }
 }
  

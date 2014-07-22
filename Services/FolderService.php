@@ -2,20 +2,20 @@
 
 namespace Hautelook\ExactTargetBundle\Services;
 
-use ET_BounceEvent;
-use Hautelook\ExactTargetBundle\Model\BounceEvent as BounceEventProperties;
+use ET_Folder;
+use Hautelook\ExactTargetBundle\Model\Folder as FolderProperties;
 
-class BounceEvent extends AbstractService
+class FolderService extends AbstractService
 {
     public function __construct($appSignature, $clientId, $clientSecret, $defaultWsdl)
     {
         parent::__construct($appSignature, $clientId, $clientSecret, $defaultWsdl);
 
-        $this->service = new ET_BounceEvent();
+        $this->service = new ET_Folder();
 
         $this->service->authStub = $this->client;
 
-        $this->properties = new BounceEventProperties();
+        $this->properties = new FolderProperties();
     }
 }
  

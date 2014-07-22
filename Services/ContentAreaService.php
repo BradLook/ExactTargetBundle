@@ -2,20 +2,20 @@
 
 namespace Hautelook\ExactTargetBundle\Services;
 
-use ET_DataExtension;
-use Hautelook\ExactTargetBundle\Model\DataExtension as DataExtensionProperties;
+use ET_ContentArea;
+use Hautelook\ExactTargetBundle\Model\ContentArea as ContentAreaProperties;
 
-class DataExtension extends AbstractService
+class ContentAreaService extends AbstractService
 {
     public function __construct($appSignature, $clientId, $clientSecret, $defaultWsdl)
     {
         parent::__construct($appSignature, $clientId, $clientSecret, $defaultWsdl);
 
-        $this->service = new ET_DataExtension();
+        $this->service = new ET_ContentArea();
 
         $this->service->authStub = $this->client;
 
-        $this->properties = new DataExtensionProperties();
+        $this->properties = new ContentAreaProperties();
     }
 }
  
